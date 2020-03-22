@@ -1,0 +1,347 @@
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    color: #fff;
+}
+
+/* LAYOUT */
+#app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+/* MAIN WINDOW */
+#main-window {
+    flex-grow: 1;
+    display: flex;
+}
+
+
+/* SIDEBAR */
+#sidebar {
+    flex-basis: 10%; /* larghezza sidebar */
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-top {
+    flex-grow: 1;
+    background: #000000;
+
+}
+
+
+
+.sidebar-bottom {
+ /*debug*/
+    background-color: #000000;
+}
+
+/* CONTENT */
+#content {
+    position: relative;
+    flex-grow: 1;
+    background: #000;
+}
+
+.content-top-bar {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background: #080B11;
+    z-index: 1;
+}
+
+.upgrade-btn {
+  width: 200px;
+  height: 40px;
+  border: 1px solid white;
+  margin-top: 20px;
+  margin-right: 30px;
+  border-radius: 20px;
+  text-align: center;
+  padding:8px;
+}
+
+.text-upgrade {
+  text-decoration: none;
+  color: white;
+}
+
+#content .scrollable {
+  background-color: #141921;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    /* 90px = height di content-top-bar */
+    padding: 90px 15px 30px;
+}
+
+.content-menu {
+  position: relative;
+}
+
+.flex-container-menu {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  list-style: none;
+}
+
+
+
+.flex-item {
+margin-top: 15px;
+text-transform: uppercase;
+font-size: 1em;
+margin-left: 5%;
+padding-bottom: 20px;
+}
+
+.content-category {
+
+ /* Debug */
+}
+
+
+/* BOTTOM PLAYER */
+#player {
+  display: flex;
+  justify-content: space-between;
+
+    background: #333;
+}
+
+.logo-spoty-small {
+  margin-top: 10px;
+  display: none;
+  width: 40%;
+}
+
+.logo-spoty {
+  margin-top: 10px;
+  width: 50%;
+}
+
+.ml-20 {
+  margin-left: 20px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mt-15 {
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 600px) {
+  .logo-spoty {
+    visibility: hidden;
+    position: absolute;
+  }
+  .logo-spoty-small {
+    display: block;
+    position: relative;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10%;
+  }
+  .playlist-cont {
+    visibility: hidden;
+  }
+  .navigation span {
+    visibility: hidden;
+  }
+
+  li a .small-logo {
+    display: block;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sidebar-bottom p {
+    visibility: hidden;
+  }
+  .sidebar-bottom p i {
+    visibility: visible;
+    text-align: center;
+    margin-bottom: 1px;
+  }
+
+  .file-control .control-column {
+    display: inline-block;
+    flex-direction: row;
+
+  }
+}
+
+.playlist{
+  list-style: none;
+}
+
+.install {
+  display: inline;
+}
+
+.small-logo {
+  margin-top: 10px;
+  width: 10%;
+}
+
+.pro-pic {
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+  border-radius: 50%;
+  background-color: grey;
+  margin-bottom: 10px;
+}
+
+.pro-pic-logo {
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+}
+
+
+
+li a {
+  text-decoration: none;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-category {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+
+.column {
+  margin-top: 15px;
+  margin-left: 5%;
+  padding-bottom: 20px;
+}
+
+.flex-container-menu-col {
+  display: flex;
+  flex-flow: column wrap;
+  list-style: none;
+  justify-content: flex-start;
+  min-height: 0;
+}
+
+.mt-50 {
+  margin-top: 50px;
+  }
+
+#content-category2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+.songs-img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.mb-5 {
+  margin-bottom: 15px;
+}
+
+
+.flex-item-cont {
+margin-top: 15px;
+margin-left: 1%;
+padding-bottom: 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.player-album-img {
+  margin-left: 20px;
+  margin-right:10px;
+  width: 50px;
+  height: 50px;
+}
+
+.file-control {
+  margin-top: 10px;
+}
+
+.control-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.control-column {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.control-column i {
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+.control-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.player-control {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5%;
+  flex-grow: 0.2;
+}
+
+.flex-control {
+
+}
+
+.output-control {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5%;
+  flex-grow: 0.2;
+}
+
+.sidebar-bottom p {
+  margin-bottom: 10px;
+  font-size: 0.8em;
+}
